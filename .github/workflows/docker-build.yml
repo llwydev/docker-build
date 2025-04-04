@@ -1,18 +1,14 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
+# This is a GitHub Actions workflow file for building and pushing a Docker image to Docker Hub.
+# It is triggered on pushes to the main branch and on new tags that start with 'v'.
 
-# GitHub recommends pinning actions to a commit SHA.
-# To get a newer version, you will need to update the SHA.
-# You can also reference a tag or branch, but the action may change without warning.
-
-name: Publish Docker image
+name: Publish Docker image to Docker Hub
 
 on:
-  release:
-    types: [published]
-
+  push:
+    branches:
+      - main
+    tags:
+      - 'v*'
 jobs:
   push_to_registry:
     name: Push Docker image to Docker Hub
