@@ -1,7 +1,7 @@
-# This is a GitHub Actions workflow file for building and pushing a Docker image to Docker Hub.
+# This is a GitHub Actions workflow file for building and pushing a Docker image to a Docker Hub repository.
 # It is triggered on pushes to the main branch and on new tags that start with 'v'.
 
-name: Publish Docker image to Docker Hub
+name: Publish Docker image to Docker Hub on push
 
 on:
   push:
